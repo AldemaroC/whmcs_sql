@@ -58,14 +58,11 @@ function whmcs_sql_CreateAccount($params){
 					'senhaservidor' => $params['serverpassword'],
 					'usuariocliente' => $username,
 					'senhacliente' => $senha
-					);
-        
-		postar($post);
-		
+					);	
 		
 		mysql_query("UPDATE tblhosting SET username='$username' WHERE id='$serviceid'");
 		
-	return 'success';
+	return postar($post);
 }
 
 function whmcs_sql_TerminateAccount($params){
@@ -79,9 +76,7 @@ function whmcs_sql_TerminateAccount($params){
 					'senhaservidor' => $params['serverpassword'],
 					'usuariocliente' => $username,
 					);
-        
-		postar($post);
-	
-	return 'success';
+        	
+	return postar($post);
 }
 ?>
