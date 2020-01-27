@@ -20,4 +20,5 @@ if ( $_POST['acao'] == "criar" ) {
 	$mysqli -> query("DROP DATABASE IF EXISTS ".$db."");
 }
 $mysqli -> close();
+echo 'success';
 ?>
