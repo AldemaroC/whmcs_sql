@@ -79,4 +79,13 @@ function whmcs_sql_TerminateAccount($params){
         	
 	return postar($post);
 }
+
+function hostzone_sql_ClientArea($params) {
+	
+	return '<center><form action="https://mysql1.hostzone.com.br/index.php" method="post" target="_blank">
+			  <input type="hidden" name="pma_username" value="'.$params['username'].'" />
+			  <input type="hidden" name="pma_password" value="'.$params['password'].'" />
+			  <input type="submit" class="btn btn-inverse" value="Ir para o phpMyAdmin" />
+			 </form></center>';
+}
 ?>
